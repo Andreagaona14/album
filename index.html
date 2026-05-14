@@ -1,29 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- Agregar icono pestaña de la página -->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icono pestaña -->
     <link rel="icon" href="img/IMG1.jpeg" type="image/jpeg">
+
     <title>Álbum</title>
 </head>
-<body>
-    <h1>Álbum de Fotos</h1>
 
+<body>
+
+    <!-- Título -->
+    <h1>Deploy de amor exitoso 💘</h1>
+
+    <!-- Carrusel -->
     <div class="slider">
-        <span style="--i:1;"><img src="img/IMG1.jpeg" alt="Imagen 1"></span>
-        <span style="--i:2;"><img src="img/IMG2.jpeg" alt="Imagen 2"></span>
-        <span style="--i:3;"><img src="img/IMG3.jpeg" alt="Imagen 3"></span>
-        <span style="--i:4;"><img src="img/IMG4.jpeg" alt="Imagen 4"></span>
-        <span style="--i:5;"><img src="img/IMG5.jpeg" alt="Imagen 5"></span>
-        <span style="--i:6;"><img src="img/IMG6.jpeg" alt="Imagen 6"></span>
-        <span style="--i:7;"><img src="img/IMG7.jpeg" alt="Imagen 7"></span>
-        <span style="--i:8;"><img src="img/IMG8.jpeg" alt="Imagen 8"></span>
+
+        <span style="--i:1;">
+            <img src="img/AS1.jpeg" alt="Imagen 1">
+        </span>
+
+        <span style="--i:2;">
+            <img src="img/AS2.jpeg" alt="Imagen 2">
+        </span>
+
+        <span style="--i:3;">
+            <img src="img/AS3.jpeg" alt="Imagen 3">
+        </span>
+
+        <span style="--i:4;">
+            <img src="img/AS4.jpeg" alt="Imagen 4">
+        </span>
+
+        <span style="--i:5;">
+            <img src="img/AS5.jpeg" alt="Imagen 5">
+        </span>
+
+        <span style="--i:6;">
+            <img src="img/AS6.jpeg" alt="Imagen 6">
+        </span>
+
+        <span style="--i:7;">
+            <img src="img/AS7.jpeg" alt="Imagen 7">
+        </span>
+
+        <span style="--i:8;">
+            <img src="img/AS8.jpeg" alt="Imagen 8">
+        </span>
+
+        <span style="--i:9;">
+            <img src="img/AS9.jpeg" alt="Imagen 8">
+        </span>
+
     </div>
 
+    <!-- Texto -->
     <p class="texto">
-        Los mejores recuerdos ✨
+       Solo quería recordarte un poquito de lo felices que hemos sido juntos...
     </p>
+
+    <!-- Música -->
+    <audio id="musica" loop>
+        <source src="music/cancion.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+
+    <!-- Botón -->
+    <button id="btnMusica" onclick="toggleMusic()">
+        ▶ 
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+
+        const musica = document.getElementById("musica");
+        const boton = document.getElementById("btnMusica");
+
+        function toggleMusic(){
+
+            if(musica.paused){
+
+                musica.play();
+
+                boton.innerHTML = "⏸ ";
+            }
+
+            else{
+
+                musica.pause();
+
+                boton.innerHTML = "▶ ";
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>
